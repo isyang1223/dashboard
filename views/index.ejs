@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Panda Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+</head>
+<body>
+    <h1>Awesome Pandas!</h1>
+    
+    
+    <% for (var i in pandas) { %>
+    
+    
+            <p><a href="/pandas/<%= pandas[i].id %>">  <%= pandas[i].panda %> </a> <%= pandas[i].name %> <a href="/pandas/edit/<%= pandas[i].id %>">Edit</a><form action="/pandas/destroy/<%= pandas[i].id %>" method="post"><input type="submit" value="Delete"></form> </p>
+        <% } %>
+<a href="/pandas/new">create a new panda</a>
+
+</body>
+</html>
